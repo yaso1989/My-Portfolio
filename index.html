@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yasmeen Al Dali - Programmer Portfolio">
+    <meta name="description" content="Yasmeen Al Dali's portfolio showcasing projects, skills in Java, PHP, Python, .NET, and more. A programming student eager to contribute to software development and innovation.">
     <title>Yasmeen Al Dali | Programmer Portfolio</title>
+    
+    <!-- Font & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -53,6 +57,58 @@
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
         }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #004d99;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #002d72;
+        }
+
+        /* Skills Section */
+        .skill {
+            margin-bottom: 1.5rem;
+        }
+        .skill h3 {
+            display: flex;
+            align-items: center;
+        }
+        .skill h3 i {
+            margin-right: 10px;
+        }
+        .progress {
+            background-color: #ddd;
+            border-radius: 25px;
+            height: 25px;
+            width: 100%;
+        }
+        .progress-bar {
+            background-color: #004d99;
+            height: 100%;
+            color: white;
+            text-align: right;
+            padding-right: 10px;
+            line-height: 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 25px 0 0 25px;
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+
+        .skill:hover .progress-bar {
+            width: auto;
+        }
+
+        /* Project Section */
         .project {
             border-bottom: 1px solid #ddd;
             padding: 1rem 0;
@@ -67,6 +123,37 @@
         .project p {
             margin: 0.5rem 0;
         }
+        .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        form {
+            margin-top: 1rem;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form input[type="submit"] {
+            background-color: #004d99;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        form input[type="submit"]:hover {
+            background-color: #002d72;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 1rem;
@@ -78,10 +165,38 @@
         footer p {
             margin: 0;
         }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #004d99;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 50%;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        .back-to-top:hover {
+            background-color: #002d72;
+        }
+
+        /* Media Queries */
         @media (max-width: 600px) {
             nav a {
                 display: block;
                 margin: 10px 0;
+            }
+            section {
+                padding: 1rem;
+            }
+            .progress {
+                height: 20px;
+            }
+            .progress-bar {
+                font-size: 0.875rem;
             }
         }
     </style>
@@ -89,7 +204,7 @@
 <body>
 
 <header>
-    <h1>Yasmeen Al Dali | Programmer Portfolio</h1>
+    <h1>Yasmeen Al Dali | Programmer Analyst Portfolio</h1>
 </header>
 
 <nav>
@@ -104,39 +219,72 @@
     <p>I'm an enthusiastic programming student at LaSalle College, eager to further hone my skills and contribute to innovative projects. I have experience in various programming languages including Java, PHP, Python, and .NET. I'm passionate about software development and always ready to explore new opportunities.</p>
 </section>
 
+<!-- Resume Section -->
+<section id="resume">
+    <h2>Resume</h2>
+    <p>Interested in learning more about my skills and experience? Download my resume below:</p>
+    <a href="Resume.pdf" target="_blank" class="btn">Download Resume</a>
+</section>
+
 <section id="skills">
     <h2>Skills</h2>
-    <ul>
-        <li>Java</li>
-        <li>PHP</li>
-        <li>Python (Django)</li>
-        <li>.NET Framework</li>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Database Management (MySQL, SQL)</li>
-    </ul>
+
+    <div class="skill">
+        <h3><i class="fab fa-java"></i> Java</h3>
+        <div class="progress">
+            <div class="progress-bar" style="width: 85%;">85%</div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <h3><i class="fab fa-php"></i> PHP</h3>
+        <div class="progress">
+            <div class="progress-bar" style="width: 75%;">75%</div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <h3><i class="fab fa-python"></i> Python (Django)</h3>
+        <div class="progress">
+            <div class="progress-bar" style="width: 70%;">70%</div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <h3><i class="fas fa-code"></i> .NET Framework</h3>
+        <div class="progress">
+            <div class="progress-bar" style="width: 80%;">80%</div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <h3><i class="fas fa-laptop-code"></i> HTML, CSS, JavaScript</h3>
+        <div class="progress">
+            <div class="progress-bar" style="width: 90%;">90%</div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <h3><i class="fas fa-database"></i> Database Management (MySQL, SQL)</h3>
+        <div class="progress">
+            <div class="progress-bar" style="width: 85%;">85%</div>
+        </div>
+    </div>
 </section>
 
 <section id="projects">
     <h2>Projects</h2>
-    
     <div class="project">
-        <h3>Kids' Game (PHP, JavaScript, CSS)</h3>
-        <p>This interactive game was built using PHP and JavaScript, providing children with a fun and educational platform.</p>
-        <a href="https://github.com/yaso1989/DW3_Final_Project" target="_blank">View on GitHub</a>
+        <h3>Kid's Game</h3>
+        <p>A fun, educational game built using PHP, JavaScript, and CSS. It challenges kids to solve puzzles and learn while having fun.</p>
+        <img src="project1.jpg" alt="Kid's Game Project">
     </div>
 
     <div class="project">
-        <h3>YasmeenProfileApp (Kotlin)</h3>
-        <p>A Kotlin-based Android app featuring a structured layout with sections for user profile, navigation, and actions. The design includes profile information, booking options, and a bottom navigation menu, with a clean and user-friendly interface.</p>
-        <a href="https://github.com/yaso1989/YasmeenProfileApp-android-kooc-app-" target="_blank">View on GitHub</a>
+        <h3>YasmeenProfileApp</h3>
+        <p>An Android app showcasing user profiles and allowing users to customize their profile information. Built using Kotlin.</p>
+        <img src="project2.jpg" alt="YasmeenProfileApp Project">
     </div>
-    
-    <div class="project">
-        <h3>ASP.NET Web Forms Application</h3>
-        <p>An ASP.NET Web Forms application developed to manage employee information using SQL Server and ADO.NET. The application supports CRUD operations and input validation.</p>
-        <a href="https://github.com/yaso1989/ASP.NET-Web-Forms-Application" target="_blank">View on GitHub</a>
-    </div>
-    
 </section>
 
 <section id="contact">
@@ -145,8 +293,10 @@
 </section>
 
 <footer>
-    <p>© 2024 Yasmeen Al Dali. All rights reserved.</p>
+    <p>&copy; 2024 Yasmeen Al Dali. All rights reserved.</p>
 </footer>
+
+<a href="#top" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
 </body>
 </html>
