@@ -1,0 +1,220 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    background-color: #1e1e2e; /* Dark, modern background */
+    color: #f0f0f0;
+    scroll-behavior: smooth;
+    padding-bottom: 2rem;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-fish-skin.png'); /* Subtle texture for depth */
+}
+
+/* Header */
+header {
+    background-color: #0d1117; /* Darker header for contrast */
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #ff79c6;
+    margin-top: 1rem;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    color: #ff79c6; /* Bright color for links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #bd93f9; /* Smooth hover transition */
+}
+
+/* Sections */
+section {
+    padding: 3.5rem 2rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #ff79c6;
+    margin-bottom: 1rem;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #cfcfcf;
+    margin-bottom: 1.8rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-item {
+    background-color: #0d1117; /* Keep it consistent with the dark theme */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sharper shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.project-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    color: #f8f8f2;
+    transition: color 0.3s ease;
+}
+
+.project-item h3:hover {
+    color: #50fa7b;
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: #cfcfcf;
+}
+
+/* Buttons */
+.btn {
+    background-color: #50fa7b; /* Stand-out green for buttons */
+    color: #1e1e2e;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #40d972;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* Contact Section */
+#contact p {
+    margin-bottom: 1.2rem;
+}
+
+#contact a {
+    color: #ff79c6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #bd93f9;
+    text-decoration: underline;
+}
+
+/* Resume Section */
+#resume .btn {
+    margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #0d1117;
+    color: #f8f8f2;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #6272a4; /* Muted color for less prominent text */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .project-item {
+        padding: 1rem;
+    }
+}
